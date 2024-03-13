@@ -12,22 +12,13 @@ public class Controleur implements ActionListener{
     private Model model;
     private View vue;
 
-    public Controleur()
+    public Controleur(Model model, View vue)
     {
 
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        this.vue.setlibelle();
+        
     }
-
-    public void setVue(View vue){
-        this.vue = vue;
-    }
-
-    public void setModel(Model model){
-        this.model = model;
-    }
-    
 }
