@@ -1,0 +1,27 @@
+La partie view de mon application comprend tous les éléments graphiques tels que les boutons, les libellés, les champs de texte et le pendu lui-même, ainsi que l'ensemble de l'interface utilisateur de mon application, elle va appelé les addActionListener
+lorsque le bouton associé est appuyé et les envoyer à mon controleur
+
+
+Le contrôleur de ma partie gère les différents addActionListener des boutons de ma view grâce aux actionPerformed.
+
+- Un actionPerformed lance la partie en appelant la méthode choisirMotAleatoire() de ma classe modèle.
+
+- Un autre actionPerformed, s'il est activé, récupère la lettre que l'utilisateur souhaite tester via un getter.
+Si la lettre entrée n'est pas "une seule lettre", une exception est générée.
+De plus, la lettre est ajoutée à la liste des lettres testées via un setter de la classe modèle.
+Sinon, il appelle une méthode de la classe modèle pour tester la lettre.
+Si le test échoue, une méthode de la view est appelée pour faire évoluer graphiquement le pendu et appel une méthode de ma classe Model pour faire un décompte des tentative restante. Ensuite, une autre méthode de Model est appuyé  pour vérifier si la partie est terminé si c'est vrai alors une méthode de la view est appelé pour afficher la défaite.
+Si le test réussi, une méthode de view est appelé pour afficher la lettre
+Une autre méthode de la classe Model est appelé pour vérifier si toute les lettres sont trouvé, si c'est le cas alors une méthode
+la view est appelé afficher la Victoire
+
+Lorsque le jeux est terminé (victoire ou défaire), une méthode de la view est appelé pour rendre créer un bouton recommencer
+
+- Un troisième actionPerformed, s'il est activé, appelle une méthode de la view pour afficher les lettres proposées aux joueurs grâce à un getter de la liste de lettres testées.
+
+- Un quatrième actionPerformed, s'il est activé recommence la partie en réinitialisant toutes les données 
+
+La partie Modèle de mon programme va encapsuler la logique de celui-ci, comprenant les différentes méthodes nécessaires à son fonctionnement qui seront appelées par le contrôleur. Elle stockera également les données essentielles du programme, telles que les tentatives restantes et les lettres déjà utilisées.
+
+
+

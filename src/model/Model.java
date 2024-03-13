@@ -16,6 +16,10 @@ public class Model {
 
     }
 
+    /**
+     * Cette méthode lit un fichier texte contenant une liste de mots, choisit aléatoirement un mot de la liste, et retourne ce mot.
+     * @return Le mot choisi aléatoirement à partir du fichier texte. Si le fichier est vide ou inaccessible, renvoie null.
+     */
     public String choisirMotAleatoire() {
         ArrayList<String> mots = new ArrayList<>();
         try {
@@ -42,8 +46,5 @@ public class Model {
         return motsDansLigne[0]; // Retourner le premier mot de la ligne
     }
 
-    public String getmotChoisi()
-    {
-        return this.motChoisi;
-    }
+    
 }
